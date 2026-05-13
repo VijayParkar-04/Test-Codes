@@ -1,1 +1,11 @@
-Hello
+#include<stdio.h>
+#include<stdint.h>
+int main()
+{
+    uint8_t value = 0x43;
+
+    // Set last 6 bits to 1 and upper 2 bits to 0
+    value = value & 0x3F;
+    value = value | 0x3F;
+    printf("Result = 0x%X\n", value);
+}
